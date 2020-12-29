@@ -6,16 +6,16 @@ import Spacer from '../components/Spacer';
 
 const SignupScreen = ( { navigation }) => {
     return <View style={styles.container}>
-    <Spacer>
+    <Spacer margin={10}>
     <Text style= {styles.text} h3>Signup for Tracker</Text>
     </Spacer>
     
    
     <Input label= 'Email' inputContainerStyle={styles.inputContainer}/>    
-    <Spacer/>
+    
 
     <Input label= 'Password' inputContainerStyle={styles.inputContainer}/>
-    <Spacer/> 
+    <Spacer margin={10}/> 
 
     <Button title= 'Sign up' 
     buttonStyle={styles.appButtonContainer}
@@ -51,8 +51,6 @@ const styles = StyleSheet.create({
         color:'#393e46',        
       },
       container: {
-          borderColor: 'red',
-          borderWidth: 10,
           flex: 1,
           justifyContent: 'center',
           marginBottom: 200,
