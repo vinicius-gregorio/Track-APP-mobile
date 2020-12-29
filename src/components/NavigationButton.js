@@ -1,11 +1,11 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 
-import NavigationButton from '../components/NavigationButton';
-
-const TrackListScreen = ({ navigation }) => {
+const NavigationButton = ({ onPress, title }) => {
     return <>
-    <NavigationButton title='Go to Track Detail' onPress={() => navigation.navigate('TrackDetail')}/>
+    <TouchableOpacity onPress={onPress}  style={styles.appButtonContainer}>
+    <Text style={styles.appButtonText}>{title}</Text>
+    </TouchableOpacity>    
     </>
 }
 
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
       },
 });
 
-export default TrackListScreen;
+export default NavigationButton;
