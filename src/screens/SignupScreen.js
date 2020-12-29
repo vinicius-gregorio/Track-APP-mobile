@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import {Text, Input, Button} from 'react-native-elements';
 import NavigationButton from '../components/NavigationButton';
