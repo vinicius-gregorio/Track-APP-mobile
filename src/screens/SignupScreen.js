@@ -1,30 +1,45 @@
 import React from 'react';
-import { View, StyleSheet, Text, Button, TouchableOpacity } from 'react-native';
-
+import { View, StyleSheet } from 'react-native';
+import {Text, Input, Button} from 'react-native-elements';
 import NavigationButton from '../components/NavigationButton';
+import Spacer from '../components/Spacer';
 
 const SignupScreen = ( { navigation }) => {
-    return <>
-
-    <Text style= {{fontSize:48, color:'#393e46'}}>signup Screen</Text>
-
-    <NavigationButton title='Go to Sign In' onPress={() => navigation.navigate('Signin')}/>
+    return <View style={styles.container}>
+    <Spacer>
+    <Text style= {styles.text} h3>Signup for Tracker</Text>
+    </Spacer>
     
-    <NavigationButton title='Go to Track List' onPress={() => navigation.navigate('TrackList')}/>
+   
+    <Input label= 'Email' inputContainerStyle={styles.inputContainer}/>    
+    <Spacer/>
+
+    <Input label= 'Password' inputContainerStyle={styles.inputContainer}/>
+    <Spacer/> 
+
+    <Button title= 'Sign up' 
+    buttonStyle={styles.appButtonContainer}
+     onPress={() => console.log('onpress')}/>   
   
    
-    </>
+    </View>
 }
 
+SignupScreen.navigationOptions = () => {
+    return {
+      headerShown: false,
+    };
+  };
+  
 const styles = StyleSheet.create({
     appButtonContainer: {
         elevation: 8,
-        backgroundColor: "#00adb5",
-        borderRadius: 10,
+        backgroundColor: "#333",
+        borderRadius: 25,
         paddingVertical: 10,
         paddingHorizontal: 12,
         marginHorizontal: 10,
-        marginVertical: 10,
+        
       },
       appButtonText: {
         fontSize: 18,
@@ -33,7 +48,20 @@ const styles = StyleSheet.create({
        
       },
       text: {
-        color:'#393e46',
+        color:'#393e46',        
+      },
+      container: {
+          borderColor: 'red',
+          borderWidth: 10,
+          flex: 1,
+          justifyContent: 'center',
+          marginBottom: 200,
+      },
+      inputContainer: {
+        borderColor: '#333',
+        borderWidth: 1,
+        borderRadius: 25,
+        paddingStart: 10,
       },
 });
 

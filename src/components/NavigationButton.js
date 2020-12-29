@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     appButtonContainer: {
         elevation: 8,
         backgroundColor: "#333",
-        borderRadius: 10,
+        borderRadius: 25,
         paddingVertical: 10,
         paddingHorizontal: 12,
         marginHorizontal: 10,
