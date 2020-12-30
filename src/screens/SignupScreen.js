@@ -5,16 +5,32 @@ import NavigationButton from '../components/NavigationButton';
 import Spacer from '../components/Spacer';
 
 const SignupScreen = ( { navigation }) => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+
     return <View style={styles.container}>
     <Spacer margin={10}>
     <Text style= {styles.text} h3>Signup for Tracker</Text>
     </Spacer>
     
    
-    <Input label= 'Email' inputContainerStyle={styles.inputContainer}/>    
+    <Input label= 'E-mail'
+     value={email}
+     onChangeText={setEmail}
+     autoCapitalize='none'
+     autoCorrect={false}
+     inputContainerStyle={styles.inputContainer}/>    
     
 
-    <Input label= 'Password' inputContainerStyle={styles.inputContainer}/>
+    <Input label= 'Password'
+    value={password}
+    onChangeText={setPassword}
+    autoCapitalize='none'
+    autoCorrect={false}
+    secureTextEntry
+    inputContainerStyle={styles.inputContainer}/>
     <Spacer margin={10}/> 
 
     <Button title= 'Sign up' 
