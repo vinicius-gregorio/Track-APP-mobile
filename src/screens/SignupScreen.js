@@ -37,6 +37,8 @@ const SignupScreen = ( { navigation }) => {
     inputContainerStyle={styles.inputContainer}/>
     <Spacer margin={10}/> 
 
+
+    {state.errorMessage ? <Text style={styles.errorMessage}>{state.errorMessage}</Text> : null}
     <Button title= 'Sign up' 
     buttonStyle={styles.appButtonContainer}
      onPress={() => signup({email, password})}/>   
@@ -80,6 +82,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 25,
         paddingStart: 10,
+      },
+      errorMessage: {
+        fontSize: 16,
+        color: 'red',
+        marginLeft: 50,
+        marginBottom: 15,
       },
 });
 
