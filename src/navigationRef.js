@@ -7,7 +7,7 @@ export const setNavigator = (nav) => {
     navigator = nav;
 };
 
-export const anvigate = (routName, params) => {
+export const navigate = (routName, params) => {
     navigator.dispatch(
         NavigationActions.navigate({
             routeName,
